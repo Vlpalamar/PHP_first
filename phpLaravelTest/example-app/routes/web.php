@@ -37,3 +37,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/pets',[petsController::class,'index'])->name('pets');
+
+Route::get('/users',function ()
+{
+    return view('users');
+});
