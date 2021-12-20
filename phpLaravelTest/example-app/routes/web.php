@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StartController;
 use \Illuminate\Support\Facades\Auth;
+use \App\Http\Controllers\petsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +36,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/pets',[petsController::class,'index'])->name('pets');
